@@ -1,12 +1,24 @@
 package ru.reybos.forum.model;
 
+import javax.persistence.*;
 import java.util.*;
 
+@Entity
+@Table(name = "post")
 public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String name;
+
+    @Column(name = "description")
     private String desc;
+
+    @Temporal(TemporalType.TIMESTAMP)
     private Calendar created = new GregorianCalendar();
+
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "post", fetch = FetchType.LAZY)
     private final List<Comment> comments = new ArrayList<>();
 
     public static Post of(String name, Calendar created, String desc) {
@@ -18,8 +30,8 @@ public class Post {
     }
 
     public void addComment(Comment comment) {
-        comment.setPost(this);
         this.comments.add(comment);
+        comment.setPost(this);
     }
 
     public int getId() {

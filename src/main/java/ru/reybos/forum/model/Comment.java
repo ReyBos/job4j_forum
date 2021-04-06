@@ -1,13 +1,25 @@
 package ru.reybos.forum.model;
 
+import javax.persistence.*;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Objects;
 
+@Entity
+@Table(name = "comment")
 public class Comment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "description")
     private String desc;
+
+    @Temporal(TemporalType.TIMESTAMP)
     private Calendar created = new GregorianCalendar();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "post_id")
     private Post post;
 
     public int getId() {

@@ -1,11 +1,10 @@
 package ru.reybos.forum.service;
 
 import org.springframework.stereotype.Service;
-import ru.reybos.forum.repository.mem.PostRepository;
+import ru.reybos.forum.repository.db.PostRepository;
 import ru.reybos.forum.model.Post;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,12 +14,6 @@ public class PostService {
 
     public PostService(PostRepository postRepository) {
         this.postRepository = postRepository;
-        this.postRepository.save(
-                Post.of("Продам гараж", new GregorianCalendar(), "вместительный, теплый")
-        );
-        this.postRepository.save(
-                Post.of("Продам машину", new GregorianCalendar(), "не бита, не крашена")
-        );
     }
 
     public void save(Post post) {
@@ -32,8 +25,9 @@ public class PostService {
     }
 
     public List<Post> findAll() {
-        List<Post> posts = new ArrayList<>(postRepository.findAll());
-        return posts;
+        List<Post> rsl = new ArrayList<>();
+        postRepository.findAll().forEach(rsl::add);
+        return rsl;
     }
 
     public Optional<Post> findById(int id) {

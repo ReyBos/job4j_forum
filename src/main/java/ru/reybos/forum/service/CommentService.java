@@ -3,8 +3,10 @@ package ru.reybos.forum.service;
 import org.springframework.stereotype.Service;
 import ru.reybos.forum.model.Comment;
 import ru.reybos.forum.model.Post;
-import ru.reybos.forum.repository.mem.CommentRepository;
-import ru.reybos.forum.repository.mem.PostRepository;
+import ru.reybos.forum.repository.db.CommentRepository;
+import ru.reybos.forum.repository.db.PostRepository;
+
+import javax.transaction.Transactional;
 
 @Service
 public class CommentService {
@@ -16,9 +18,10 @@ public class CommentService {
         this.postRepository = postRepository;
     }
 
+    @Transactional
     public void save(Comment comment) {
-        commentRepository.save(comment);
         Post post = postRepository.findById(comment.getPost().getId()).get();
         post.addComment(comment);
+        commentRepository.save(comment);
     }
 }
