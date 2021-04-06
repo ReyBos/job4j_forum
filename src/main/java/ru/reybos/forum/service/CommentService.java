@@ -2,7 +2,6 @@ package ru.reybos.forum.service;
 
 import org.springframework.stereotype.Service;
 import ru.reybos.forum.model.Comment;
-import ru.reybos.forum.model.Post;
 import ru.reybos.forum.repository.db.CommentRepository;
 import ru.reybos.forum.repository.db.PostRepository;
 
@@ -20,8 +19,6 @@ public class CommentService {
 
     @Transactional
     public void save(Comment comment) {
-        Post post = postRepository.findById(comment.getPost().getId()).get();
-        post.addComment(comment);
         commentRepository.save(comment);
     }
 }
