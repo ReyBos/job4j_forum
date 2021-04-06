@@ -27,7 +27,7 @@
                 <div class="card-content" style="padding-bottom: 10px; padding-top: 10px">
                     <div class="row" style="margin-bottom: 0;">
                         <p class="input-field col s12" style="margin-bottom: 8px">
-                            <strong>Автор</strong>, <fmt:formatDate type="time" value="${post.created.time}" pattern="dd.MM.yyyy HH:mm:ss"/>
+                            <strong>${post.user.username}</strong>, <fmt:formatDate type="time" value="${post.created.time}" pattern="dd.MM.yyyy HH:mm:ss"/>
                         </p>
                         <p class="input-field col s12">
                             ${post.desc}
@@ -45,7 +45,7 @@
                     <div class="card-content" style="padding-bottom: 10px; padding-top: 10px">
                         <div class="row" style="margin-bottom: 0;">
                             <p class="input-field col s12" style="margin-bottom: 8px">
-                                <strong>Автор</strong>, <fmt:formatDate type="time" value="${comment.created.time}" pattern="dd.MM.yyyy HH:mm:ss"/>
+                                <strong>${comment.user.username}</strong>, <fmt:formatDate type="time" value="${comment.created.time}" pattern="dd.MM.yyyy HH:mm:ss"/>
                             </p>
                             <p class="input-field col s12">
                                     ${comment.desc}

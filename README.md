@@ -18,6 +18,10 @@
         <strong><a href="https://coderoad.ru/22824190/%D0%9A%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82-%D0%B4%D0%B0%D1%82%D1%8B-%D0%BA%D0%B0%D0%BA-yyyy-MM-dd-%D1%81-JSTL">link</a></strong>
         - вывод форматированной даты jstl
     </li>
+    <li>
+        <strong><a href="https://www.baeldung.com/spring-redirect-and-forward">link</a></strong>
+        - при редиректе на другую страницу передать параметры в гет запросе
+    </li>
     <!--<li>
         <strong><a href="">link</a></strong>
         - сервлеты и Ajax

@@ -25,6 +25,7 @@
                 <thead>
                 <tr>
                     <th>Заголовок</th>
+                    <th>Автор</th>
                     <th class="center-align">Дата</th>
                     <th></th>
                 </tr>
@@ -35,16 +36,21 @@
                         <td>
                             <a href='<c:url value="/post/view?id=${post.id}"/>'>${post.name}</a>
                         </td>
+                        <td>
+                            ${post.user.username}
+                        </td>
                         <td class="center-align">
                             <fmt:formatDate type="time" value="${post.created.time}" pattern="dd.MM.yyyy"/>
                         </td>
                         <td class="right-align">
-                            <a href='<c:url value="/post/update?id=${post.id}"/>'>
-                                <i class="material-icons">edit</i>
-                            </a>
-                            <a href='<c:url value="/post/delete?id=${post.id}"/>'>
-                                <i class="material-icons">delete</i>
-                            </a>
+                            <c:if test="${post.user.id == userId}">
+                                <a href='<c:url value="/post/update?id=${post.id}"/>'>
+                                    <i class="material-icons">edit</i>
+                                </a>
+                                <a href='<c:url value="/post/delete?id=${post.id}"/>'>
+                                    <i class="material-icons">delete</i>
+                                </a>
+                            </c:if>
                         </td>
                     </tr>
                 </c:forEach>
