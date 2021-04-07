@@ -166,6 +166,10 @@
         <strong><a href="https://www.baeldung.com/spring-redirect-and-forward">link</a></strong>
         - при редиректе на другую страницу передать параметры в гет запросе
     </li>
+    <li>
+        <strong><a href="https://sysout.ru/testirovanie-kontrollerov-s-pomoshhyu-mockmvc/">link</a></strong>
+        - Тестирование контроллеров с помощью MockMvc
+    </li>
     <!--<li>
         <strong><a href="">link</a></strong>
         - сервлеты и Ajax
