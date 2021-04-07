@@ -10,7 +10,9 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import ru.reybos.forum.Main;
 import ru.reybos.forum.model.Post;
+import ru.reybos.forum.model.User;
 import ru.reybos.forum.service.PostService;
+import ru.reybos.forum.service.UserService;
 
 import java.util.List;
 
@@ -27,11 +29,16 @@ public class IndexControlTest {
     @MockBean
     private PostService postService;
 
+    @MockBean
+    private UserService userService;
+
     @Test
     @WithMockUser
     public void shouldReturnDefaultMessage() throws Exception {
         List<Post> posts = List.of();
         Mockito.when(postService.findAll()).thenReturn(posts);
+        User user = new User();
+        Mockito.when(userService.findByUsername(Mockito.any())).thenReturn(user);
         this.mockMvc.perform(get("/index"))
                 .andDo(print())
                 .andExpect(status().isOk())
