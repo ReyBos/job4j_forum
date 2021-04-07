@@ -1,5 +1,6 @@
 # Forum
 [![Build Status](https://travis-ci.org/ReyBos/job4j_forum.svg?branch=master)](https://travis-ci.org/ReyBos/job4j_forum) &nbsp;&nbsp;
+[![codecov](https://codecov.io/gh/ReyBos/job4j_forum/branch/master/graph/badge.svg)](https://codecov.io/gh/ReyBos/job4j_forum)
 
 <a name="menu"></a>
 <ul>
@@ -42,8 +43,8 @@
 <h4><a name="technologies">Технологии</a>&nbsp;&nbsp;<a href="#menu">&#9650;</a></h4>
 <ul>
     <li>Java 14</li>
-    <li>Spring Boot, JSP, JSTL</li>
-    <li>PostgreSQL, Hibernate</li>
+    <li>Spring Boot(Data, Security, Test), JSP, JSTL</li>
+    <li>PostgreSQL</li>
     <li>Maven</li>
     <li><a href="https://materializecss.com">Material Design library</a></li>
 </ul>
