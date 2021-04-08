@@ -16,9 +16,6 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
     @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Autowired
     private DataSource ds;
 
     @Override
