@@ -45,7 +45,7 @@
     <li>Java 14</li>
     <li>Spring Boot(Data, Security, Test), JSP, JSTL</li>
     <li>PostgreSQL</li>
-    <li>Maven</li>
+    <li>Maven, Heroku</li>
     <li><a href="https://materializecss.com">Material Design library</a></li>
 </ul>
 
