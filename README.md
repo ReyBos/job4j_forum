@@ -1,4 +1,4 @@
-# Forum
+# Forum &nbsp;&nbsp; [демо](https://limitless-sands-13354.herokuapp.com/login)
 [![Build Status](https://travis-ci.org/ReyBos/job4j_forum.svg?branch=master)](https://travis-ci.org/ReyBos/job4j_forum) &nbsp;&nbsp;
 [![codecov](https://codecov.io/gh/ReyBos/job4j_forum/branch/master/graph/badge.svg)](https://codecov.io/gh/ReyBos/job4j_forum)
 
@@ -45,7 +45,7 @@
     <li>Java 14</li>
     <li>Spring Boot(Data, Security, Test), JSP, JSTL</li>
     <li>PostgreSQL</li>
-    <li>Maven</li>
+    <li>Maven, Heroku</li>
     <li><a href="https://materializecss.com">Material Design library</a></li>
 </ul>
 
