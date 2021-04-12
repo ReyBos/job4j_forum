@@ -1,6 +1,7 @@
-# Forum &nbsp;&nbsp; [демо](https://limitless-sands-13354.herokuapp.com/login)
+# Forum &nbsp;&nbsp;
 [![Build Status](https://travis-ci.org/ReyBos/job4j_forum.svg?branch=master)](https://travis-ci.org/ReyBos/job4j_forum) &nbsp;&nbsp;
-[![codecov](https://codecov.io/gh/ReyBos/job4j_forum/branch/master/graph/badge.svg)](https://codecov.io/gh/ReyBos/job4j_forum)
+[![codecov](https://codecov.io/gh/ReyBos/job4j_forum/branch/master/graph/badge.svg)](https://codecov.io/gh/ReyBos/job4j_forum) &nbsp;&nbsp;
+[![alt-text](https://img.shields.io/badge/-heroku-283e4a?style=flat&logo=heroku&logoColor=white)](https://limitless-sands-13354.herokuapp.com/login)
 
 <a name="menu"></a>
 <ul>
